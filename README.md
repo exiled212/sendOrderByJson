@@ -1,22 +1,16 @@
 # csvToJson
-Herramienta que permite transformar un archivo csv con headers en un archivo con formato json, este se crea en la misma ruta del archivo csv.
+Herramienta que enviar una lista de eventos http.
 
 # Instalar:
 * npm i
  # Instrucción
-* node index.js --input=ruta del archivo csv sin extención
-# Ejemplos:
-Teniendo en cuenta que tenemos 3 archivos csv en las siguientes rutas:
-* ./file.csv
-* /home/user/document/file.csv
-* ../csv/file.csv
-
-Podemos ejecutar los siguientes comandos:
-* node index.js --input=./file
-* node index.js --input=/home/user/document/file
-* node index.js --input=../csv/file
-
-Lo cual nos creara un json para cada uno:
-* ./file.json
-* /home/user/document/file.json
-* ../csv/file.json
+ - Copiamos todos los json que tienen la extención json.sample y le quitamos el .sample
+ - Se llena con la información http el archivo config.json
+ - ingresamos la lista de datos a enviar por http de la siguiente forma:
+ "[
+    {body uno},
+    {body dos},
+    ...
+    {body n}
+   ]" 
+ - Una vez listo esto se envian los datos con node index.js la respuesta estara en un json en result.js con dos valores como json: request con el body que se mando y response con la respuesta

@@ -68,3 +68,5 @@ package-lock.json
 
 # Proyect
 config.json
+data.json
+result.json
