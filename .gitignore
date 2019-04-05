@@ -70,3 +70,4 @@ package-lock.json
 config.json
 data.json
 result.json
+buildResponse.js

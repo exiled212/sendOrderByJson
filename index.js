@@ -6,6 +6,7 @@
 
     const orders = require('./data.json');
     const config = require('./config.json');
+    const buildResponse = require('./buildResponse.js');
 
     let contentFile = [];
 
@@ -16,7 +17,7 @@
         let order = orders[i];
         let resultRequest = await sendDataLocal(order);
 
-        resultJson.response = JSON.parse(resultRequest);
+        resultJson.response = buildResponse(resultRequest);
         resultJson.request = order;
         contentFile.push(resultJson);
     }
