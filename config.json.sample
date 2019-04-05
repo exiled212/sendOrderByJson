@@ -1,0 +1,12 @@
+{
+  "host": "",
+  "port": "",
+  "path": "/api/restaurants-integrations-test/menu-mapping-test/",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json",
+    "x-auth-token":"Bearer ...",
+    "save-log": "false",
+    "pos-flow": "false"
+  }
+}
